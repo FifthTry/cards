@@ -1,57 +1,64 @@
 -- import: fifthtry.github.io/persona/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+-- import: fifthtry.github.io/persona/person
+-- import: fifthtry.github.io/persona/person-list
 
 
 
--- ds.page: Welcome to your [FPM site](https://fpm.dev/)
-
-FPM Blank Package Template Repo
-
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
 
 
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
-width: fill
+-- ft.page: `person` and it's Usage
 
-
---- ds.h1: 🚀 Project Structure
-
-Inside of your FPM project, you'll see the following folders and files:
-
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
+Badges can be used as part of any component and are available in below formats:
 
 
 
---- ds.h1: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
 
 
---- ds.h1: 👀 Want to learn more?
+-- pd.package: `persona`
+name: fifthtry.github.io/persona
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Create a single person card OR person cards list using your excel sheet data. 
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/persona
+\-- fpm.auto-import: fifthtry.github.io/persona
+
+
+-- tf.markdown: 
+
+Below is example of `Cards`.
+
+
+
+-- person-list.persona-list:
+persons: $person-list.persons-data
+
+
+
+
+-- person.persona-card: Amit Upadhyay
+profile: CEO, FifthTry Pvt. Ltd.
+avatar: $assets.files.static.amitu.jpg
+email: amitu@fifthtry.com
+phone: +91 1234123412
+address: 66737 Reinke Park, Banglore - 560068
+
+
+Sunglass(1, 2, 3), Dare to be scared book 😜, codename game, Bharat game, Chai 
+Garam game
+
+
+
+
+
+
+
+
+
+
+
+
 
