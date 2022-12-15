@@ -1,0 +1,177 @@
+-- import: fpm
+-- import: fifthtry.github.io/cards/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+-- ft.page: `Cards` and it's Usage
+
+Cards can be used as part of any component and are available in below formats:
+
+-- pd.package: `Cards`
+name: fifthtry.github.io/bling/Cards
+
+Create a single repo card using your excel sheet data. 
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/cards
+\-- fpm.auto-import: fifthtry.github.io/cards/user
+
+-- tf.markdown: 
+
+Below is example of `user-card`.
+
+Once you add above lines into your web package, add `user-card` into your 
+`.ftd` files:
+
+-- cb.code:
+lang: ftd
+
+\-- user.user-card:Ganesh Salunke
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: @gsalunke
+url: https://github.com/gsalunke
+repos: 99
+followers: 78
+
+Not available for hire.
+
+
+--- tf.markdown: 
+
+Output of above:
+
+-- user-card:Ganesh Salunke
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: @gsalunke
+url: https://github.com/gsalunke
+repos: 99
+followers: 78
+
+Not available for hire.
+
+-- ftd.column user-card:
+caption title:
+ftd.image-src avatar:
+string handle-id:
+body body:
+string url:
+integer repos:
+integer followers:
+width: auto
+min-width: 380
+padding-vertical: 20
+padding-horizontal: 20
+border-color: $fpm.color.main.border
+border-width: 1
+border-radius: 6
+color: $fpm.color.main.text
+spacing: 16
+
+--- ftd.row:
+width: fill
+id: first-row
+
+--- ftd.row:
+width: fill
+id: first-sub-row
+spacing: 16
+
+--- ftd.column:
+link: $url
+
+--- ftd.image:
+src: $avatar
+border-radius: 4
+width: 48
+height: 48
+
+--- container: first-sub-row
+
+--- ftd.column:
+align: center
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+style: bold
+align: center
+link: $url
+
+
+--- ftd.text: $handle-id
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+link: $url
+
+--- container: first-row
+
+--- ftd.row:
+id: second-container
+
+--- ftd.text: Follow
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+border-color: $fpm.color.main.border
+border-width: 1
+border-radius: 4
+padding-vertical: 4
+padding-horizontal: 8
+link: $url
+
+
+
+--- container: ftd.main
+
+--- ftd.row:
+width: fill
+id: third-container
+border-top: 1
+border-bottom: 1
+border-color: $fpm.color.main.border
+
+
+--- ftd.column:
+border-right: 1
+border-color: $fpm.color.main.border
+padding-horizontal: 12
+padding-vertical: 8
+
+--- ftd.integer: $repos
+role:$fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+style: bold
+
+--- ftd.text: repos
+role:$fpm.type.copy-tight
+
+--- container: third-container
+
+--- ftd.column:
+padding-horizontal: 12
+padding-vertical: 8
+
+--- ftd.integer: $followers
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+style: bold
+
+--- ftd.text: followers
+role:$fpm.type.copy-tight
+
+--- container: ftd.main
+
+--- ftd.text: 
+text:$body
+role:$fpm.type.fine-print
+color: $fpm.color.main.text
+style:  semi-bold

@@ -1,0 +1,162 @@
+-- import: fpm
+-- import: fifthtry.github.io/cards/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+-- ft.page: `Cards` and it's Usage
+
+Cards can be used as part of any component and are available in below formats:
+
+-- pd.package: `Cards`
+name: fifthtry.github.io/bling/Cards
+
+Create a single tweet card using your excel sheet data. 
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/cards
+\-- fpm.auto-import: fifthtry.github.io/cards/tweet
+
+-- tf.markdown: 
+
+Below is example of `tweet-card`.
+
+Once you add above lines into your web package, add `tweet-card` into your 
+`.ftd` files:
+
+-- cb.code:
+lang: ftd
+
+\-- tweet.tweet-card:Tweeter
+url: https://twitter.com/
+date: Sep 24, 2022
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: @tweeter
+post-image: $assets.files.static.image-placeholder.png
+post-image-url: /repo-card/
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+
+
+--- tf.markdown: 
+
+Output of above:
+
+-- tweet-card:Tweeter
+url: https://twitter.com/
+date: Sep 24, 2022
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: @tweeter
+post-image: $assets.files.static.image-placeholder.png
+post-image-url: /repo-card/
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+-- ftd.row tweet-card:
+caption title:
+string url:
+ftd.image-src avatar:
+string handle-id:
+optional body body:
+optional ftd.image-src post-image:
+optional string post-image-url:
+optional string post-video:
+optional string date:
+optional string time:
+width: auto
+min-width: 380
+padding-vertical: 24
+padding-horizontal: 24
+border-color: $fpm.color.main.border
+border-width: 1
+border-radius: 6
+color: $fpm.color.main.text
+spacing: 12
+
+
+--- ftd.column:
+link: $url
+
+--- ftd.image:
+src: $avatar
+width: 48
+height: 48
+border-radius: 100
+
+--- container: ftd.main
+
+
+--- ftd.column:
+id: first-container
+width: fill
+
+
+--- ftd.row:
+width: fill
+
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+style: bold
+margin-right: 8
+
+--- ftd.text: $handle-id
+role: $fpm.type.copy-tight
+margin-right: 12
+--- ftd.text: $date
+role: $fpm.type.copy-tight
+
+--- container: first-container
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-relaxed
+text-align: justify
+width: fill
+margin-top: 4
+
+--- container: first-container
+
+--- ftd.image: 
+if: $post-image-url is  null
+src: $post-image
+width: fill
+height: auto
+border-radius: 8
+
+--- ftd.column:
+width: fill
+if: $post-image-url is not null
+link: $post-image-url
+margin-top: 12
+
+--- ftd.image: 
+src: $post-image
+width: fill
+height: auto
+border-radius: 8
+
+;--- ftd.column:
+;if: $post-video is not null
+
+;--- ftd.iframe:
+;youtube: $post-video 
+;height: 400
+;width: fill
+;margin-bottom: 34
+
