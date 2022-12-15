@@ -1,7 +1,7 @@
--- import: fifthtry.github.io/persona/assets
+-- import: fifthtry.github.io/cards/assets
 -- import: fifthtry.github.io/package-doc/doc as pd
--- import: fifthtry.github.io/persona/person
--- import: fifthtry.github.io/persona/person-list
+-- import: fifthtry.github.io/cards/person
+-- import: fifthtry.github.io/cards/person-list
 
 
 
