@@ -1,7 +1,7 @@
 -- import: fpm
 
--- fpm.package: fifthtry.github.io/persona
-download-base-url: https://raw.githubusercontent.com/fifthtry/persona/main
+-- fpm.package: fifthtry.github.io/cards
+download-base-url: https://raw.githubusercontent.com/fifthtry/cards/main
 
 -- fpm.dependency: fifthtry.github.io/package-doc as pd
 -- fpm.dependency: fifthtry.github.io/inter
@@ -12,7 +12,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/persona/main
 -- fpm.auto-import: pd/typography as tf
 -- fpm.auto-import: pd/code-block as cb
 -- fpm.auto-import: pd/forest-theme as ft
--- fpm.auto-import: fifthtry.github.io/persona/FPM/config
+-- fpm.auto-import: fifthtry.github.io/cards/FPM/config
 
 
 -- fpm.sitemap:
