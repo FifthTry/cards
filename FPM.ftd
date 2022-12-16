@@ -21,3 +21,6 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/cards/main
 
 - Person Card: /person/
 - Person List Card: /person-list/
+- Repo Card: /repo/
+- User Card: /user/
+- Tweet Card: /tweet/
