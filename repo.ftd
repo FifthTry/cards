@@ -1,0 +1,195 @@
+-- import: fpm
+-- import: fifthtry.github.io/cards/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+
+
+
+-- ft.page: `Cards` and it's Usage
+
+Cards can be used as part of any component and are available in below formats:
+
+-- pd.package: `Cards`
+name: fifthtry.github.io/bling/Cards
+
+Create a single repo card using your excel sheet data. 
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/cards
+\-- fpm.auto-import: fifthtry.github.io/cards/repo
+
+-- tf.markdown: 
+
+Below is example of `repo-card`.
+
+Once you add above lines into your web package, add `repo-card` into your 
+`.ftd` files:
+
+-- cb.code:
+lang: ftd
+
+\-- repo.repo-card: gsalunke
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: gsalunke
+handle-url: https://github.com/gsalunke
+url: https://github.com/gsalunke/gsalunke
+tech-lang: FTD
+forks: 01
+stars: 01
+
+`gsalunke` is my cardsl web blog.
+
+
+--- tf.markdown: 
+
+Output of above:
+
+
+-- repo-card: gsalunke
+avatar: $assets.files.static.ganeshs.jpeg
+handle-id: gsalunke
+handle-url: https://github.com/gsalunke
+url: https://github.com/gsalunke/gsalunke
+tech-lang: FTD
+forks: 01
+stars: 01
+
+`gsalunke` is my cardsl web blog.
+
+
+
+-- ftd.column repo-card:
+caption title:
+ftd.image-src avatar:
+string handle-id:
+string tech-lang:
+string url:
+string handle-url:
+integer forks:
+integer stars:
+body body:
+min-width: 380
+width: auto
+padding-top: 16
+padding-horizontal: 16
+border-color: $fpm.color.main.border
+border-width: 1
+background-color: $fpm.color.main.background.step-1
+spacing: 16
+border-radius: 6
+
+--- ftd.row:
+width: fill
+id: first-container
+spacing: 4
+
+--- ftd.row:
+id: second-container
+width: fill
+margin-right: 8
+
+--- ftd.column:
+link: $url
+
+--- ftd.image:
+src: $avatar
+width: 48
+height: 48
+border-radius: 4
+
+
+--- container: second-container
+
+--- ftd.column:
+id: third-container
+width: fill
+margin-left: 8
+
+--- ftd.row:
+width: fill
+id: fourth-container
+padding-top: 4
+spacing: 4
+margin-bottom: 4
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text-strong
+style: bold
+align: center
+link: $url
+
+
+--- ftd.text: $tech-lang
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+margin-top: -6
+
+--- container: third-container
+
+--- ftd.row:
+spacing: 4
+
+--- ftd.text: Created by
+role: $fpm.type.fine-print
+
+--- ftd.text: $handle-id
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+link: $handle-url
+
+
+--- container: first-container
+
+--- ftd.text: Star
+role: $fpm.type.fine-print
+color: $fpm.color.main.text
+border-color: $fpm.color.main.border
+border-width: 1
+border-radius: 4
+padding-vertical: 4
+padding-horizontal: 8
+link: $url
+
+--- container: ftd.main
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.text
+
+--- ftd.row:
+border-top: 1
+border-color: $fpm.color.main.border
+padding-bottom: 16
+padding-top: 16
+width: fill
+
+--- ftd.integer: $forks
+role: $fpm.type.fine-print
+color: $fpm.color.main.text-strong
+margin-right: 4
+style: bold
+
+--- ftd.text: forks
+role: $fpm.type.fine-print
+margin-right: 20
+
+--- ftd.integer: $stars
+role: $fpm.type.fine-print
+color: $fpm.color.main.text-strong
+margin-right: 4
+style: bold
+
+
+--- ftd.text: Stars
+role: $fpm.type.fine-print
+
