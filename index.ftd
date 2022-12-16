@@ -1,58 +1,138 @@
 -- import: fifthtry.github.io/cards/assets
 -- import: fifthtry.github.io/package-doc/doc as pd
 -- import: fifthtry.github.io/cards/person
--- import: fifthtry.github.io/cards/person-list
+-- import: fifthtry.github.io/cards/repo
+-- import: fifthtry.github.io/cards/user
+-- import: fifthtry.github.io/cards/tweet
+
+
+
+-- ft.page: `card` and it's Usage
+
+Cards can be used as part of any component and are available in below formats:
 
 
 
 
 
--- ft.page: `person` and it's Usage
+-- pd.package: `cards`
+name: fifthtry.github.io/cards
 
-Badges can be used as part of any component and are available in below formats:
-
-
-
-
-
--- pd.package: `persona`
-name: fifthtry.github.io/persona
-
-Create a single person card OR person cards list using your excel sheet data. 
+Create a single card OR cards list using your excel sheet data. 
 
 -- cb.code:
 lang: ftd
 
-\-- fpm.dependency: fifthtry.github.io/persona
-\-- fpm.auto-import: fifthtry.github.io/persona
+\-- fpm.dependency: fifthtry.github.io/cards
+\-- fpm.auto-import: fifthtry.github.io/cards
 
 
 -- tf.markdown: 
 
 Below is example of `Cards`.
 
+-- ftd.column:
+id: main-container
+width: fill
 
+-- ftd.column:
+margin-bottom: $fpm.space.space-4
+width: fill
 
--- person-list.persona-list:
-persons: $person-list.persons-data
-
-
-
+-- ftd.text: `-- persona-card` sample
+role: $fpm.type.copy-large
+color: $fpm.color.main.text
+margin-bottom: $fpm.space.space-8
 
 -- person.persona-card: Amit Upadhyay
 profile: CEO, FifthTry Pvt. Ltd.
 avatar: $assets.files.static.amitu.jpg
 email: amitu@fifthtry.com
 phone: +91 1234123412
-address: 66737 Reinke Park, Banglore - 560068
+address: Banglore , Karnataka- 560099
 
 
 Sunglass(1, 2, 3), Dare to be scared book 😜, codename game, Bharat game, Chai 
 Garam game
 
+-- container: main-container
 
+-- ftd.column:
+border-top: 2
+border-style: double
+margin-top: $fpm.space.space-6
+border-color: $fpm.color.main.text
+margin-bottom: $fpm.space.space-4
+width: fill
 
+-- ftd.text: `-- repo-card` sample
+role: $fpm.type.copy-large
+color: $fpm.color.main.text
+margin-top: $fpm.space.space-8
+margin-bottom: $fpm.space.space-8
 
+-- repo.repo-card: FPM
+avatar: $assets.files.static.amitu.jpg
+handle-id: amitu
+handle-url: https://github.com/amitu
+url: https://github.com/amitu/fpm
+tech-lang: rust
+forks: 07
+stars: 09
+
+`FPM` Package Manager
+
+-- ftd.column:
+border-top: 2
+border-style: double
+margin-top: $fpm.space.space-8
+border-color: $fpm.color.main.text
+margin-bottom: $fpm.space.space-4
+width: fill
+
+-- ftd.text: `-- user-card` sample
+role: $fpm.type.copy-large
+color: $fpm.color.main.text
+margin-top: $fpm.space.space-8
+margin-bottom: $fpm.space.space-8
+
+-- user.user-card: Amit Upadhyay
+avatar: $assets.files.static.amitu.jpg
+handle-id: @amitu
+url: https://github.com/amitu
+repos: 140
+followers: 480
+
+Building New Language `FTD` 
+
+-- container: main-container
+
+-- ftd.column:
+border-top: 2
+border-style: double
+margin-top: $fpm.space.space-8
+border-color: $fpm.color.main.text
+margin-bottom: $fpm.space.space-4
+width: fill
+
+-- ftd.text:`-- tweet-card` sample
+role: $fpm.type.copy-large
+color: $fpm.color.main.text
+margin-top: $fpm.space.space-8
+margin-bottom: $fpm.space.space-8
+
+-- tweet.tweet-card: Amit Upadhyay
+url: https://twitter.com/amitu
+date: Oct 22, 2022
+avatar: $assets.files.static.amitu.jpg
+handle-id: @amitu
+post-image: $assets.files.static.image-placeholder.png
+post-image-url: https://www.fifthtry.com/events/c1w1/
+
+FTD language is a possible replacement for JavaScript/React to 
+build web front-ends. In this workshop you will learn the basics 
+of FTD and build a web app that talks to existing web services. 
+We will build an application for managing to-do lists from scratch.
 
 
 

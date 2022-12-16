@@ -12,20 +12,20 @@ if: $ftd.device == mobile
 
 
 
--- ft.page: `person` and it's Usage
+-- ft.page: `Cards` and it's Usage
 
-Cards can be used as part of any component and are available in below formats:
+Badges can be used as part of any component and are available in below formats:
 
--- pd.package: `person-list`
-name: fifthtry.github.io/persona/person-list
+-- pd.package: `cards`
+name: fifthtry.github.io/cards/person-list
 
 Create a single person card OR person cards list using your excel sheet data. 
 
 -- cb.code:
 lang: ftd
 
-\-- fpm.dependency: fifthtry.github.io/cards
-\-- fpm.auto-import: fifthtry.github.io/cards/person-list
+\-- fpm.dependency: fifthtry.github.io/persona
+\-- fpm.auto-import: fifthtry.github.io/persona/person-list
 
 -- tf.markdown: 
 
