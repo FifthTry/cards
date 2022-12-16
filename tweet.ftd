@@ -54,11 +54,11 @@ aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 
 Output of above:
 
--- tweet-card:Tweeter
+-- tweet-card: Gsalunke
 url: https://twitter.com/
 date: Sep 24, 2022
 avatar: $assets.files.static.ganeshs.jpeg
-handle-id: @tweeter
+handle-id: @gsalunke
 post-image: $assets.files.static.image-placeholder.png
 post-image-url: /repo-card/
 
@@ -84,9 +84,9 @@ padding-horizontal: 24
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 6
-color: $fpm.color.main.text
+color: $fpm.color.main.background.step-1
 spacing: 12
-
+background-color: $fpm.color.main.text-strong
 
 --- ftd.column:
 link: $url
@@ -111,15 +111,20 @@ width: fill
 
 --- ftd.text: $title
 role: $fpm.type.copy-tight
-color: $fpm.color.main.text-strong
+color: $fpm.color.main.info.border
 style: bold
 margin-right: 8
 
 --- ftd.text: $handle-id
 role: $fpm.type.copy-tight
+color: $fpm.color.main.border-strong
 margin-right: 12
+
 --- ftd.text: $date
 role: $fpm.type.copy-tight
+color: $fpm.color.main.border
+
+
 
 --- container: first-container
 
