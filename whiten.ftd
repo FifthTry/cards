@@ -1,0 +1,163 @@
+-- import: fpm
+-- import: fifthtry.github.io/cards/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+
+-- ft.page: `Cards` and it's Usage
+
+Cards can be used as part of any component and are available in below formats:
+
+-- pd.package: `Cards`
+name: fifthtry.github.io/bling/Cards
+
+Create a single tweet card using your excel sheet data. 
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/cards
+\-- fpm.auto-import: fifthtry.github.io/cards/whiten
+
+-- tf.markdown: 
+
+Below is example of `whiten`.
+
+Once you add above lines into your web package, add `whiten` into your 
+`.ftd` files:
+
+-- cb.code:
+lang: ftd
+
+\-- whiten.whiten: Lorem ipsum dor 
+owner: AmitU
+owner-avatar: $assets.files.static.amitu.jpg
+status: On Track
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+
+
+
+--- tf.markdown: 
+
+Output of above:
+
+-- whiten: Lorem ipsum dor 
+owner: AmitU
+owner-avatar: $assets.files.static.amitu.jpg
+status: On Track
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna 
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+
+
+
+
+
+
+
+
+
+
+-- ftd.column whiten:
+optional caption title:
+optional body body:
+optional string owner:
+optional string helper:
+optional ftd.image-src owner-avatar:
+optional ftd.image-src helper-avatar:
+optional string owner-profile:
+optional string helper-profile:
+string status:
+width: fill
+open: true
+id: presentation-container
+append-at: presentation-container
+border-radius: 10
+spacing: 24
+background-color: $fpm.color.main.background.step-1
+border-width: 1
+border-color: $fpm.color.main.border
+
+--- ftd.column:
+width: fill
+min-height: fill
+id: main-block
+
+--- ftd.row:
+width: fill
+id: card-block
+
+--- ftd.row:
+width: fill
+background-color: $fpm.color.main.text-strong
+id: title-row
+padding-vertical: 12
+padding-horizontal: 12
+border-top-radius: 10
+
+--- ftd.column:
+id: picture-area
+spacing: 20
+padding-right: $fpm.space.space-6
+
+--- ftd.column:
+if: $owner is not null
+spacing: 8
+align: center
+
+--- ftd.image:
+if: $owner-avatar is null
+src: $assets.files.static.avatar.png
+width: 32
+height: 32
+border-radius: 100
+
+--- ftd.image:
+if: $owner-avatar is not null
+src: $owner-avatar
+width: 32
+height: 32
+border-radius: 100
+
+--- ftd.text: $owner
+role: $fpm.type.copy-tight
+color: $fpm.color.main.cta-secondary.base
+align: center
+margin-top: $fpm.space.space-3
+
+--- container: title-row
+
+--- ftd.column:
+id: content-area
+align: center
+
+--- ftd.row:
+width: fill
+
+--- ftd.text: $title
+role: $fpm.type.heading-medium
+color: $fpm.color.main.background.base
+align: center
+
+--- container: main-block
+
+--- ftd.column:
+width: fill
+padding-vertical: 24
+padding-horizontal: 24
+
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-tight
+color: $fpm.color.main.text
+width: fill
+text-align: justify
+margin-top: $fpm.space.space-2
+
+--- ftd.column:
+width: fill
+id: presentation-container
