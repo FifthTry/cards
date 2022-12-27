@@ -84,9 +84,9 @@ padding-horizontal: 24
 border-color: $fpm.color.main.border
 border-width: 1
 border-radius: 6
-color: $fpm.color.main.background.step-1
+color: $fpm.color.main.text
 spacing: 12
-background-color: $fpm.color.main.text-strong
+background-color: $fpm.color.main.background.step-1
 
 --- ftd.column:
 link: $url
