@@ -149,7 +149,6 @@ width: fill
 padding-vertical: 24
 padding-horizontal: 24
 
-
 --- ftd.text: 
 text: $body
 role: $fpm.type.copy-tight
