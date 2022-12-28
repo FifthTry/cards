@@ -68,7 +68,7 @@ optional ftd.image-src owner-avatar:
 optional ftd.image-src helper-avatar:
 optional string owner-profile:
 optional string helper-profile:
-string status:
+optional string status:
 width: fill
 open: true
 id: presentation-container
