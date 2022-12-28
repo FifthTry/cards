@@ -66,6 +66,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna 
 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 
+
+
+
+
+
+
+
+
 -- ftd.row tweet-card:
 caption title:
 string url:
@@ -99,15 +107,12 @@ border-radius: 100
 
 --- container: ftd.main
 
-
 --- ftd.column:
 id: first-container
 width: fill
 
-
 --- ftd.row:
 width: fill
-
 
 --- ftd.text: $title
 role: $fpm.type.copy-tight
@@ -123,8 +128,6 @@ margin-right: 12
 --- ftd.text: $date
 role: $fpm.type.copy-tight
 color: $fpm.color.main.border
-
-
 
 --- container: first-container
 

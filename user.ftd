@@ -59,6 +59,15 @@ followers: 78
 
 Not available for hire.
 
+
+
+
+
+
+
+
+
+
 -- ftd.column user-card:
 caption title:
 ftd.image-src avatar:
@@ -107,7 +116,6 @@ style: bold
 align: center
 link: $url
 
-
 --- ftd.text: $handle-id
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
@@ -118,7 +126,7 @@ link: $url
 --- ftd.row:
 id: second-container
 
---- ftd.text: Follow
+/--- ftd.text: Follow
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 border-color: $fpm.color.main.border
@@ -128,8 +136,6 @@ padding-vertical: 4
 padding-horizontal: 8
 link: $url
 
-
-
 --- container: ftd.main
 
 --- ftd.row:
@@ -138,7 +144,6 @@ id: third-container
 border-top: 1
 border-bottom: 1
 border-color: $fpm.color.main.border
-
 
 --- ftd.column:
 border-right: 1

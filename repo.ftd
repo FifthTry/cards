@@ -66,6 +66,13 @@ stars: 01
 
 
 
+
+
+
+
+
+
+
 -- ftd.column repo-card:
 caption title:
 ftd.image-src avatar:
@@ -105,7 +112,6 @@ width: 48
 height: 48
 border-radius: 4
 
-
 --- container: second-container
 
 --- ftd.column:
@@ -127,7 +133,6 @@ style: bold
 align: center
 link: $url
 
-
 --- ftd.text: $tech-lang
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
@@ -146,10 +151,9 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text
 link: $handle-url
 
-
 --- container: first-container
 
---- ftd.text: Star
+/--- ftd.text: Star
 role: $fpm.type.fine-print
 color: $fpm.color.main.text
 border-color: $fpm.color.main.border
@@ -188,7 +192,6 @@ role: $fpm.type.fine-print
 color: $fpm.color.main.text-strong
 margin-right: 4
 style: bold
-
 
 --- ftd.text: Stars
 role: $fpm.type.fine-print
