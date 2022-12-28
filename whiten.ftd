@@ -30,7 +30,6 @@ lang: ftd
 \-- whiten.whiten: Lorem ipsum dor 
 owner: AmitU
 owner-avatar: $assets.files.static.amitu.jpg
-status: On Track
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -46,7 +45,6 @@ Output of above:
 -- whiten: Lorem ipsum dor 
 owner: AmitU
 owner-avatar: $assets.files.static.amitu.jpg
-status: On Track
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 sed do eiusmod tempor incididunt ut labore et dolore magna 
